@@ -50,8 +50,8 @@ public class MybatisAdapterTest {
         testGetPolicy(e, asList(
                 asList("alice", "data1", "read"),
                 asList("bob", "data2", "write"),
-                asList("data2_admin", "data2", "read"),
-                asList("data2_admin", "data2", "write")));
+                asList("data2_admin", "data2", "rea"),
+                asList("data2_admin", "data2", "read")));
 
         // Note: you don't need to look at the above code
         // if you already have a working DB with policy inside.
