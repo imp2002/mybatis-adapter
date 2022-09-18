@@ -11,8 +11,9 @@ jobs:
         ports:
           - 3306:3306
         env:
-#          MYSQL_USER: casbin_test
-#          MYSQL_PASSWORD: TEST_casbin
+          MYSQL_USER: casbin_test
+          MYSQL_PASSWORD: TEST_casbin
+          MYSQL_ROOT_PASSWORD: TEST_casbin
           MYSQL_DATABASE: casbin
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
