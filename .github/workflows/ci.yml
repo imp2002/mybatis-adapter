@@ -1,9 +1,9 @@
-name: Build and Test
+name: CI
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  test-and-coverage:
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -29,5 +29,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean test jacoco:report
 
-      - name: Codecov
+      - name: Upload To Codecov
         uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
